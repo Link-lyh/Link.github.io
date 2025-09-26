@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>个人简历</title>
+<style>
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+}
+
+body {
+    margin: 0 auto;
+    padding: 30px;
+    max-width: 800px;
+    min-height: 150vh;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #2c3e50;
+    border: none;
+}
+
+h1 {
+    color: #2c3e50;
+    border-bottom: 2px solid #2c3e50;
+    padding-bottom: 10px;
+}
+
+h2 {
+    position: relative;
+    margin: -15px 0 25px 0;
+    padding: 12px 20px;
+    background: rgba(255,255,255,0.98);
+    color: #2c3e50;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(44,62,80,0.1);
+    z-index: 1;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.section {
+    margin-bottom: 2.5rem;
+    padding: 30px 30px 40px;
+    position: relative;
+    background: rgba(255,255,255,0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.section:hover {
+    transform: translateY(-5px);
+}
+
+.timeline-item {
+        margin: 20px 0;
+        background: rgba(255,255,255,0.95);
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 8px 30px rgba(44,62,80,0.12);
+        opacity: 0;
+    transform: translateX(30px);
+    animation: timelineSlide 0.8s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+.contact-btn {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 6px rgba(52,152,219,0.2);
+}
+
+.contact-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(52,152,219,0.3);
+}
+
+.skills-list {
+    columns: 2;
+}
+
+@keyframes timelineSlide {
+    0% { opacity: 0; transform: translateX(30px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.section {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.text-board {
+    margin: 3rem 0 0;
+    padding: 2rem;
+    background: rgba(255,255,255,0.95);
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(44,62,80,0.12);
+}
+
+.board-content {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #4a4a4a;
+}
+    margin: 3rem 0 0;
+}
+
+.editable-content {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #4a5568;
+    min-height: 200px;
+    border: 2px dashed rgba(52,152,219,0.2);
+    transition: all 0.3s ease;
+    padding: 1.5rem;
+    background: rgba(255,255,255,0.98);
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+@media (max-width: 768px) {
+    .text-board {
+        margin: 2rem 0 0;
+        padding: 1.5rem;
+    }
+    .editable-content {
+        padding: 1rem;
+        min-height: 150px;
+    }
+    body {
+        padding: 15px;
+    }
+    .section {
+        margin: 15px 0;
+        padding: 15px;
+    }
+}
+</style>
+</head>
+<body style="overflow-y: auto; height: 100vh;">
+    <h1>个人简历 <span style="color: #3498db">Personal Resume</span></h1>
+    
+    <!-- 基本信息 -->
+    <div class="section">
+        <h2>基本信息</h2>
+        <table>
+            <tr>
+                <td>姓名：刘宇杭</td>
+                <td>出生年月：2013年4月15日</td>
+                <td>民族：汉</td>
+                <td>身高：### cm </td>
+                
+            </tr>
+            
+            <tr>
+                <td>电话：19150154491</td>
+                <td>政治面貌：群众</td>
+            </tr>
+            <tr>
+                <td>邮箱：19150154491@163.com</td>
+                <td>毕业院校：#### </td>
+            </tr>
+            <tr>
+                <td>住址：### </td>
+        </tr>
+        
+        </table>
+    </div>
+
+    <!-- 教育背景 -->
+    <div class="section">
+        <div class="info-card">
+            <h2>教育背景</h2>
+            <div class="timeline">
+                <h3>2015.09 - 2018.06</h3>
+                <p class="university">#### - 物联网工程</p>
+                <ul class="courses">
+                    <li>计算机网络</li>
+                    <li>计算机组成原理</li>
+                    <li>数据结构与算法</li>
+                    <li>操作系统</li>
+                </ul>
+            </div>
+        </div>
+        <p>主修课程：</p>
+        <p>计算机网络、离散数学、计算机组成原理、数据结构、C语言、操作系统、java程序设计、数据库、单片机等。</p>
+    </div>
+
+    <!-- 其他部分保持原有结构 -->
+    <div class="section">
+            <h2>实习经历</h2>
+            <p>2024-04 至今     嵌入式开发工程师</p>
+            <p>负责在操作系统的上层即应用层，利用操作系统提供的各种API或由API封装而来的库函数做各种各样的应用，实现嵌入式系统的功能。</p>
+            <p>2024-01 至 2024   软件工程师</p>
+            <p>1.基于单片机及飞思卡尔平台开发产品；2.独立完成需求分析、软件设计工作；3.负责独立完成软件系统代码的实现，编写代码，调试，测试等；4.负责嵌入式产品的应用开发，解决在产品使用中遇到的各种问题，并进行总结与改进。</p>
+        </div>
+
+        <div class="timeline-section">
+    <h2>履历时间轴 （人生经历）</h2>
+    <div class="timeline-item">
+        <div class="timeline-header">
+            <h3>2024-04 至今</h3>
+            <p class="company">嵌入式开发工程师</p>
+        </div>
+        <ul class="timeline-content">
+            <li>负责操作系统上层应用开发</li>
+            <li>API封装及功能实现</li>
+        </ul>
+    </div>
+    <p>2024-01 至 2024   软件工程师</p>
+</div>
+
+        <div class="section">
+            <h2>自我评价</h2>
+            <p>是个人</p>
+            <p>是个人类</p>
+            <p>是个地球人</p>
+            <p>是个硅基生物</p>
+        </div>
+
+    <div class="section">
+        <h2>技能证书</h2>
+        <div class="skills-list">
+            <p>• 公路车国家三级</p>
+            <p>• 大学英语八级</p>
+            <p>• 计算机四级</p>
+            <p>• 国际外交B3级外交员</p>
+        </div>
+    </div>
+    <div class="text-board">
+        <h2>我的文字板</h2>
+        <div class="board-content">
+            <p>📝 这里可以输入任意文本内容</p>
+            <p>✨ 这里是我的专属创作区</p>
+            <p>😎 我的邮箱 3848473921@qq.com 或者 19150154491@163.com</p>
+            <p></p>
+            <p>🤗 Python 和 Rust 是世界上最好的编程语言</p>
+        </div>
+    </div>
+</body>
+</html>
